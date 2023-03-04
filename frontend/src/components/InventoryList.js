@@ -27,5 +27,5 @@ function InventoryList(props) {
     </div>
   );
 }
-
+//comit
 export default InventoryList;
