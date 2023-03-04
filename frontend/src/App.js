@@ -1,4 +1,3 @@
-import Homepage from './pages/Homepage';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import InventoryList from './components/InventoryList';
