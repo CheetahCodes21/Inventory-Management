@@ -1,6 +1,8 @@
-import './inventorylist.css';
-function InventoryList(props) {
-  const { inventoryItems } = props;
+import './suppliers.css';
+import React from 'react';
+
+function Suppliers(props) {
+  const { inventoryItems, onDelete } = props;
 
   return (
     <div className="inventory-list">
@@ -11,6 +13,8 @@ function InventoryList(props) {
             <th>Description</th>
             <th>Quantity</th>
             <th>Price</th>
+            <th>Actions</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +24,7 @@ function InventoryList(props) {
               <td>{item.description}</td>
               <td>{item.quantity}</td>
               <td>{item.price}</td>
+              <td><button onClick={() => onDelete(item.id)}>Delete</button></td>
             </tr>
           ))}
         </tbody>
@@ -28,4 +33,4 @@ function InventoryList(props) {
   );
 }
 
-export default InventoryList;
+export default Suppliers;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function AddInventoryItem(props) {
+function Shops(props) {
   const { onSubmit } = props;
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -55,4 +55,4 @@ function AddInventoryItem(props) {
   );
 }
 
-export default AddInventoryItem;
+export default Shops;
