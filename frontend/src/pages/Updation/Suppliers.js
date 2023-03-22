@@ -37,6 +37,7 @@ const Suppliers = () => {
   }; // A function to add the new product to the products state when the user clicks the "Add Product" button
 
   return (
+    <body className="body1">
     <div className="container my-5">
       <h1 className="text-center">Supplier Inventory</h1>
       <div className="row">
@@ -102,6 +103,7 @@ const Suppliers = () => {
         </div>
       </div>
     </div>
+    </body>
   );
 };
 

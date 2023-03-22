@@ -1,15 +1,14 @@
-import '../Updation/Manage.css';
+// import '../Updation/Manage.css';
 // bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import AddInventory from '../../Component/classComponent';
 import AddProduct from '../../Component/funcComponent';
 
 function AppUpd() {
   return (
+    <body className='body2'>
     <div className="App justify-content-center">
       <header>
         <h1>Product Inventory</h1>
-        {/* <AddInventory/> */}
         <AddProduct/>
         {/* <h1>We will cover here:</h1>
         <ul>
@@ -22,6 +21,7 @@ function AppUpd() {
         </ul> */}
       </header>
     </div>
+    </body>
   );
 }
 

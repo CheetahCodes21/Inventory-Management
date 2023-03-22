@@ -35,6 +35,7 @@ export default function AddProduct() {
   }
 
   return (
+    <body className="body2">
     <div className="container mt-4">
       <h2>Add Product</h2>
       <Form onSubmit={add} ref={formData}>
@@ -88,5 +89,6 @@ export default function AddProduct() {
         </tbody>
       </Table>
     </div>
+    </body>
   )
 }
