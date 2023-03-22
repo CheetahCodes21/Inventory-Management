@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import "./Login.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -28,20 +30,30 @@ function Login() {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Username:</label>
-          <input type="text" value={username} onChange={handleUsernameChange} />
+    <div className="container">
+      <div className="row justify-content-center align-items-center vh-100">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-header">
+              <h3 className="text-center">Login</h3>
+            </div>
+            <div className="card-body">
+              {errorMessage && <p className="text-danger">{errorMessage}</p>}
+              <form onSubmit={handleLogin}>
+                <div className="form-group">
+                  <label htmlFor="username">Username:</label>
+                  <input type="text" className="form-control" id="username" value={username} onChange={handleUsernameChange} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password:</label>
+                  <input type="password" className="form-control" id="password" value={password} onChange={handlePasswordChange} />
+                </div>
+                <button type="submit" className="btn btn-primary btn-block">Login</button>
+              </form>
+            </div>
+          </div>
         </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={handlePasswordChange} />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+      </div>
     </div>
   );
 }

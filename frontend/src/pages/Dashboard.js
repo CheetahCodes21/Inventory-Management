@@ -1,45 +1,90 @@
 import React from 'react';
+import { Row, Col, Card, Button } from 'react-bootstrap';
 
-function Dashboard() {
+const Dashboard = () => {
   return (
-    <div>
-      <h1>Welcome to the Dashboard!</h1>
-      <p>This is where you can view your important data and metrics.</p>
-      <div>
-        <h2>Top Products</h2>
-        <ul>
-          <li>Product A</li>
-          <li>Product B</li>
-          <li>Product C</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Sales Report</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Month</th>
-              <th>Sales</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>January</td>
-              <td>$10,000</td>
-            </tr>
-            <tr>
-              <td>February</td>
-              <td>$15,000</td>
-            </tr>
-            <tr>
-              <td>March</td>
-              <td>$12,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div className="container-fluid">
+      <Row>
+        <Col md={3}>
+          <Card className="mb-3">
+            <Card.Body>
+              <h5 className="card-title">Total Products</h5>
+              <h3 className="card-text">120</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={3}>
+          <Card className="mb-3">
+            <Card.Body>
+              <h5 className="card-title">Total Stock</h5>
+              <h3 className="card-text">980</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={3}>
+          <Card className="mb-3">
+            <Card.Body>
+              <h5 className="card-title">Total Revenue</h5>
+              <h3 className="card-text">$15,000</h3>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={3}>
+          <Card className="mb-3">
+            <Card.Body>
+              <h5 className="card-title">New Orders</h5>
+              <h3 className="card-text">24</h3>
+              <Button variant="primary">View</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
+          <Card className="mb-3">
+            <Card.Body>
+              <h5 className="card-title">Low Stock Products</h5>
+              <ul className="list-group">
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  Product 1
+                  <span className="badge bg-danger rounded-pill">3</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  Product 2
+                  <span className="badge bg-warning rounded-pill">5</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  Product 3
+                  <span className="badge bg-warning rounded-pill">7</span>
+                </li>
+              </ul>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={6}>
+          <Card className="mb-3">
+            <Card.Body>
+              <h5 className="card-title">Top Selling Products</h5>
+              <ol className="list-group">
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  Product 1
+                  <span className="badge bg-success rounded-pill">$500</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  Product 2
+                  <span className="badge bg-success rounded-pill">$350</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  Product 3
+                  <span className="badge bg-success rounded-pill">$300</span>
+                </li>
+              </ol>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
-}
+};
 
 export default Dashboard;
