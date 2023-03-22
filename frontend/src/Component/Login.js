@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import "./Login.css";
+import { useNavigate } from 'react-router-dom';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+  const navigate=useNavigate();
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -22,7 +23,8 @@ function Login() {
     if (username === 'admin' && password === 'password') {
       // successful login, navigate to dashboard
       alert('Logged in successfully!');
-      <Link to="/home"></Link>
+      // <Link to="/home"></Link>
+      navigate('/home');
     } else {
       // failed login, display error message
       setErrorMessage('Invalid username or password.');
@@ -30,6 +32,7 @@ function Login() {
   };
 
   return (
+    <body className='body3'>
     <div className="container">
       <div className="row justify-content-center align-items-center vh-100">
         <div className="col-md-6">
@@ -55,6 +58,7 @@ function Login() {
         </div>
       </div>
     </div>
+    </body>
   );
 }
 
